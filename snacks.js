@@ -20,3 +20,26 @@ secondBurger.ingredients[0] = "Salad";
 
 console.log(hamburger.ingredients[0]); //Salad
 console.log(secondBurger.ingredients[0]); //Salad
+
+
+//SNACK 3
+const hamburger = {
+    name: "Cheese Burger",
+    weight: 250,
+    maker: {
+        name: "Anonymous Chef",
+        restaurant: {
+            name: "Hyur's Burgers",
+            address: "Main Street, 123",
+            isOpen: true,
+        },
+        age: 29
+    }
+};
+
+const secondBurger = structuredClone(hamburger);
+const thirdBurger = structuredClone(hamburger);
+//per ogni structuredClone vengono creati 3 oggetti quindi un totale di 6 (contando il primo 9)
+
+
+//SNACK 4
