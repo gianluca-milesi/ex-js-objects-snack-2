@@ -67,3 +67,31 @@ const restaurant = {
 //Qual è il metodo migliore per clonare l’oggetto restaurant, e perché?
 //Il metodo migliore è structuredClone() perché copia oggetti annidati e non ci sono funzioni
 //Non è Json.parse(JSON.stringify()) perché c'è la data ed è più comune utilizzare structuredClone()
+
+
+//SNACK 5
+const hamburger = {
+    name: "Cheese Burger",
+    weight: 250,
+    maker: {
+        name: "Anonymous Chef",
+        restaurant: {
+            name: "Hyur's Burgers",
+            address: "Main Street, 123",
+            isOpen: true,
+        },
+        age: 29
+    }
+};
+
+const newRestaurant = { ...hamburger.maker.restaurant };
+newRestaurant.name = "Hyur's II";
+newRestaurant.address = "Second Street, 12";
+const secondBurger = { ...hamburger };
+secondBurger.maker.restaurant = newRestaurant;
+secondBurger.maker.name = "Chef Hyur";
+
+console.log(hamburger.maker.name); //Anonymous Chef
+console.log(secondBurger.maker.name); //Chef Hyur
+console.log(hamburger.maker.restaurant.name); //Hyur's Burgers
+console.log(secondBurger.maker.restaurant.name); //Hyur's II
