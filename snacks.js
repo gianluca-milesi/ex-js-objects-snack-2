@@ -122,6 +122,9 @@ const chef = {
 
 //Qual è il metodo migliore per clonare l’oggetto chef, e perché?
 //Nessun metodo visto è il migliore ma si può usare una funzione ricorsiva o _.cloneDeep(obj) (Lodash)
+
+
+//SNACK (Bonus)
 function deepClone(oggetto) {
     if (typeof oggetto !== "object" || oggetto === null) return oggetto
 
