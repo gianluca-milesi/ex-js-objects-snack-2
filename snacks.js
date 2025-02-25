@@ -43,3 +43,27 @@ const thirdBurger = structuredClone(hamburger);
 
 
 //SNACK 4
+const chef = {
+    name: "Chef Hyur",
+    age: 29,
+    makeBurger: (num = 1) => {
+        console.log(`Ecco ${num} hamburger per te!`);
+    },
+}
+
+const restaurant = {
+    name: "Hyur's Burgers",
+    address: {
+        street: 'Main Street',
+        number: 123,
+    },
+    openingDate: new Date(2025, 3, 11),
+    isOpen: false,
+};
+
+//Qual è il metodo migliore per clonare l’oggetto chef, e perché?
+//Il metodo migliore è lo Spread Operator perché copia le funzioni e non ci sono oggetti annidati
+
+//Qual è il metodo migliore per clonare l’oggetto restaurant, e perché?
+//Il metodo migliore è structuredClone() perché copia oggetti annidati e non ci sono funzioni
+//Non è Json.parse(JSON.stringify()) perché c'è la data ed è più comune utilizzare structuredClone()
